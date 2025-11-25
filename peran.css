@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(255, 255, 255);
+}
+.content-container {
+    margin-top: 250px; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+ul {
+    list-style: none;
+    background-color: rgb(15, 73, 132);
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    top: 175px; 
+    left: 0;
+    z-index: 1000; 
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    padding: 0 15px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+ul a:hover {
+    background-color: #f7f1f5;
+    transform: scale(1.05); 
+}
+
+ul li .dropdown {
+    background: lch(32.34% 40.21 277.89);
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    top: 60px; 
+    left: 0;
+    min-width: 200px;
+}
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li a img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+ul li ul.dropdown li a:hover img {
+    border-radius: 5px;
+}
+
+ul li ul.dropdown li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(15, 73, 132);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+}
+
+/* BAGIAN PERAN */
+.peran-section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* JUDUL */
+.peran-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(15, 73, 132);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* BOX ATAS & KESIMPULAN */
+.box {
+    border: 2px solid #1f4e79;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #f6fbff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.kesimpulan-box h3 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* GRID 2 PER ROW */
+.peran-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* CARD */
+.peran-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* KOTAK MERAH KIRI */
+.peran-icon {
+    width: 200px;
+    background-color: #e5243b; /* merah SDG 1 */
+    border-radius: 4px;
+    overflow: hidden;
+    color: #fff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.peran-label {
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.peran-icon img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEKS CARD */
+.peran-text {
+    text-align: left;
+    flex: 1;
+    padding-top: 10px;
+}
+
+.peran-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.peran-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .peran-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .peran-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .peran-icon {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .box {
+        width: 95%;
+    }
+}
+
